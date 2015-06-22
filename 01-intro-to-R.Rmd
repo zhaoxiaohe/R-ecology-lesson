@@ -196,7 +196,7 @@ Vectors are one of the many **data structures** that R uses. Other important
 ones are lists (`list`), matrices (`matrix`), data frames (`data.frame`) and
 factors (`factor`).
 
-Another way to keep track of data types is by their content (homogeneous, i.e. say type or different i.e. heterogeneous)
+Another way to keep track of data types is by their content (homogeneous, i.e. same type or different i.e. heterogeneous)
 
 
 | dimension   | Homogeneous (same data type)  | Heterogeneous (different data types) |
