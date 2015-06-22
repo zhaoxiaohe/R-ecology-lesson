@@ -278,11 +278,7 @@ come back with a new <code>&gt;</code>-prompt to wait for new commands.</p>
 the console will show a <code>+</code> prompt. It means that you haven&#39;t finished entering
 a complete command. This is because you have not &#39;closed&#39; a parenthesis or
 quotation. If you&#39;re in Rstudio and this happens, click inside the console
-window and pres <code>Esc</code>; this should help you out of trouble. When using plain R
-(i.e. outside Rstudio), you have to fix it by entering the approriate closing
-character. If it is difficult to spot the right &#39;closing character&#39;, try each of
-the following single characters in turn until the <code>&gt;</code>- prompt returns: <code>&quot;</code> ,
-<code>)</code>, <code>}</code>, <code>]</code> or <code>&#39;</code>.</p>
+window and press <code>Esc</code>; this should help you out of trouble.</p>
 
 <h1>Basics of R</h1>
 
@@ -363,9 +359,9 @@ help for this function (e.g., <code>?read.csv</code>).</p>
 <pre><code class="r">args(read.csv)
 </code></pre>
 
-<pre><code>## function (file, header = TRUE, sep = &quot;,&quot;, quote = &quot;\&quot;&quot;, dec = &quot;.&quot;, 
-##     fill = TRUE, comment.char = &quot;&quot;, ...) 
-## NULL
+<pre><code>#&gt; function (file, header = TRUE, sep = &quot;,&quot;, quote = &quot;\&quot;&quot;, dec = &quot;.&quot;, 
+#&gt;     fill = TRUE, comment.char = &quot;&quot;, ...) 
+#&gt; NULL
 </code></pre>
 
 <p>If you provide the arguments in the exact same order as they are defined you
@@ -469,13 +465,13 @@ object as the one in memory:</p>
 <pre><code class="r">dput(head(iris)) # iris is an example data.frame that comes with R
 </code></pre>
 
-<pre><code>## structure(list(Sepal.Length = c(5.1, 4.9, 4.7, 4.6, 5, 5.4), 
-##     Sepal.Width = c(3.5, 3, 3.2, 3.1, 3.6, 3.9), Petal.Length = c(1.4, 
-##     1.4, 1.3, 1.5, 1.4, 1.7), Petal.Width = c(0.2, 0.2, 0.2, 
-##     0.2, 0.2, 0.4), Species = structure(c(1L, 1L, 1L, 1L, 1L, 
-##     1L), .Label = c(&quot;setosa&quot;, &quot;versicolor&quot;, &quot;virginica&quot;), class = &quot;factor&quot;)), .Names = c(&quot;Sepal.Length&quot;, 
-## &quot;Sepal.Width&quot;, &quot;Petal.Length&quot;, &quot;Petal.Width&quot;, &quot;Species&quot;), row.names = c(NA, 
-## 6L), class = &quot;data.frame&quot;)
+<pre><code>#&gt; structure(list(Sepal.Length = c(5.1, 4.9, 4.7, 4.6, 5, 5.4), 
+#&gt;     Sepal.Width = c(3.5, 3, 3.2, 3.1, 3.6, 3.9), Petal.Length = c(1.4, 
+#&gt;     1.4, 1.3, 1.5, 1.4, 1.7), Petal.Width = c(0.2, 0.2, 0.2, 
+#&gt;     0.2, 0.2, 0.4), Species = structure(c(1L, 1L, 1L, 1L, 1L, 
+#&gt;     1L), .Label = c(&quot;setosa&quot;, &quot;versicolor&quot;, &quot;virginica&quot;), class = &quot;factor&quot;)), .Names = c(&quot;Sepal.Length&quot;, 
+#&gt; &quot;Sepal.Width&quot;, &quot;Petal.Length&quot;, &quot;Petal.Width&quot;, &quot;Species&quot;), row.names = c(NA, 
+#&gt; 6L), class = &quot;data.frame&quot;)
 </code></pre>
 
 <p>If the object is larger, provide either the raw file (i.e., your CSV file) with
@@ -501,24 +497,26 @@ to understand your problem.</p>
 <pre><code class="r">sessionInfo()
 </code></pre>
 
-<pre><code>## R version 3.1.3 (2015-03-09)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 14.10
-## 
-## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  base     
-## 
-## loaded via a namespace (and not attached):
-## [1] evaluate_0.5.5 formatR_1.0    knitr_1.9      stringr_0.6.2 
-## [5] tools_3.1.3
+<pre><code>#&gt; R version 3.2.0 (2015-04-16)
+#&gt; Platform: x86_64-apple-darwin13.4.0 (64-bit)
+#&gt; Running under: OS X 10.10.3 (Yosemite)
+#&gt; 
+#&gt; locale:
+#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+#&gt; 
+#&gt; attached base packages:
+#&gt; [1] stats     graphics  grDevices datasets  utils     base     
+#&gt; 
+#&gt; other attached packages:
+#&gt; [1] rmarkdown_0.7  knitr_1.10.5   dplyr_0.4.2    devtools_1.8.0
+#&gt; 
+#&gt; loaded via a namespace (and not attached):
+#&gt;  [1] Rcpp_0.11.6     digest_0.6.8    assertthat_0.1  plyr_1.8.3     
+#&gt;  [5] R6_2.0.1        DBI_0.3.1       formatR_1.2     git2r_0.10.1   
+#&gt;  [9] magrittr_1.5    evaluate_0.7    stringi_0.5-2   curl_0.9       
+#&gt; [13] xml2_0.1.1      coyote_0.1      tools_3.2.0     stringr_1.0.0  
+#&gt; [17] parallel_3.2.0  rversions_1.0.1 htmltools_0.2.6 memoise_0.2.1  
+#&gt; [21] methods_3.2.0
 </code></pre>
 
 <h3>Where to ask for help?</h3>
